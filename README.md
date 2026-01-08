@@ -77,8 +77,8 @@ The authors thank **Clark Solutions** for providing the **SAFEHX®** prototype a
 /
 ├── data/                     # Experimental CSV data from the pilot plant
 ├── src/
+│   ├── automation/           # Watchdog scripts for process stability
 │   ├── octave/               # System Identification module
 │   ├── scilab/               # Xcos simulation and RSM data generation
-│   ├── python/               # RSM Optimization scripts
-│   └── automation/           # Watchdog scripts for process stability
-└── docs/                     # Technical diagrams and figures
+│   └── python/               # RSM Optimization scripts 
+└── docs/                     # Technical diagrams and figures (empty because of journal paper)

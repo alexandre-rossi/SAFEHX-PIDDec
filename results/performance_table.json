@@ -1,0 +1,110 @@
+[
+ {
+  "case": "No decoupler",
+  "IAE_rel_setpoint": 1.0,
+  "IAE_rel_load": 1.0,
+  "interaction_overshoot_%": 240.71746986821046,
+  "T95_s": 338.0,
+  "slowest_pole": -0.009743573861795017,
+  "gain_margin": 11.265173819827396,
+  "u2_abs_range_%": [
+   57.97000085580804,
+   67.09547280568883
+  ]
+ },
+ {
+  "case": "Static decoupler",
+  "IAE_rel_setpoint": 0.028493678777937292,
+  "IAE_rel_load": 7.220888427205107,
+  "interaction_overshoot_%": 1.6103771736480625,
+  "T95_s": 5391.0,
+  "slowest_pole": -0.0005563705179900397,
+  "gain_margin": Infinity,
+  "u2_abs_range_%": [
+   57.9768,
+   74.10865334283176
+  ]
+ },
+ {
+  "case": "Filtered ideal D21",
+  "IAE_rel_setpoint": 0.027944978834053034,
+  "IAE_rel_load": 7.222988628987305,
+  "interaction_overshoot_%": 0.39234726642563095,
+  "T95_s": 5390.0,
+  "slowest_pole": -0.0005564864748881502,
+  "gain_margin": 18.458828317026928,
+  "u2_abs_range_%": [
+   57.9768,
+   76.66062917172471
+  ]
+ },
+ {
+  "case": "PIDDec (RSM)",
+  "IAE_rel_setpoint": 0.028896066379648814,
+  "IAE_rel_load": 7.053330814864891,
+  "interaction_overshoot_%": 1.931733176842338,
+  "T95_s": 5217.0,
+  "slowest_pole": -0.0005749652720006665,
+  "gain_margin": 27.973859162686495,
+  "u2_abs_range_%": [
+   57.9768,
+   75.11764275446149
+  ]
+ },
+ {
+  "case": "No decoupler, Kp22 x7",
+  "IAE_rel_setpoint": 0.5984277223669933,
+  "IAE_rel_load": 1.0074788935322876,
+  "interaction_overshoot_%": 181.1297471823082,
+  "T95_s": 46.0,
+  "slowest_pole": -0.008992333571556651,
+  "gain_margin": 1.7095096455695966,
+  "u2_abs_range_%": [
+   57.970005990656254,
+   71.71293881408198
+  ]
+ },
+ {
+  "case": "Static decoupler, Kp22 x103",
+  "IAE_rel_setpoint": 0.04301213617186464,
+  "IAE_rel_load": 0.14096611333123588,
+  "interaction_overshoot_%": 1.6805984541454742,
+  "T95_s": 38.0,
+  "slowest_pole": -0.08640684869158925,
+  "gain_margin": 30.0903884454774,
+  "u2_abs_range_%": [
+   58.6704,
+   74.05221844402095
+  ]
+ },
+ {
+  "case": "Filtered ideal D21, Kp22 x103",
+  "IAE_rel_setpoint": 0.04327214494034272,
+  "IAE_rel_load": 0.14368554134386152,
+  "interaction_overshoot_%": 0.3795871161611951,
+  "T95_s": 38.0,
+  "slowest_pole": -0.07478314656287671,
+  "gain_margin": 17.142092288981985,
+  "u2_abs_range_%": [
+   58.6704,
+   76.69222050820626
+  ]
+ },
+ {
+  "case": "PIDDec (RSM), Kp22 x103",
+  "IAE_rel_setpoint": 0.0430814907855375,
+  "IAE_rel_load": 0.13939348035246496,
+  "interaction_overshoot_%": 1.8247262980522663,
+  "T95_s": 37.0,
+  "slowest_pole": -0.08828705111858395,
+  "gain_margin": 25.27032111108292,
+  "u2_abs_range_%": [
+   58.566751255323915,
+   75.16622959756627
+  ]
+ },
+ {
+  "case": "No decoupler, Kp22 x103",
+  "slowest_pole": 0.03689376134055847
+ }
+]

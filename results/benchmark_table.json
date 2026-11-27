@@ -1,0 +1,26 @@
+[
+ {
+  "plant": "Hylte",
+  "static_rule": 0.10055938451548084,
+  "static_opt": 0.08658354117796406,
+  "ideal": 0.19477316441989337,
+  "ideal_realizable": false,
+  "pid": 0.06924987900151185,
+  "iterations": 28,
+  "load_static": 0.9097609762514397,
+  "load_pid": 0.700223239696476,
+  "load_ideal": null
+ },
+ {
+  "plant": "WoodBerry",
+  "static_rule": 0.1622641583691584,
+  "static_opt": 0.15846088387666996,
+  "ideal": 0.0005470564045393249,
+  "ideal_realizable": true,
+  "pid": 0.050972266367632836,
+  "iterations": 49,
+  "load_static": 1.2027036610830801,
+  "load_pid": 2.565201012343302,
+  "load_ideal": 2.407875112175301
+ }
+]

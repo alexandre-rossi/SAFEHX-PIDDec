@@ -1,0 +1,63 @@
+% Block diagram of the decentralized control with the one-way PIDDec
+% (style after Garrido et al., 2016, Fig. 2). Included with \input{block_diagram.tex}.
+\begin{tikzpicture}[
+  >=Stealth, font=\footnotesize, line width=0.5pt,
+  blk/.style={draw, fill=white, minimum width=1.0cm, minimum height=0.5cm, inner sep=1pt},
+  sum/.style={draw, circle, fill=white, inner sep=0pt, minimum size=0.28cm},
+  grp/.style={draw, dashed, fill=gray!12, rounded corners=1pt},
+  sg/.style={font=\scriptsize, inner sep=1pt}
+]
+% groups (drawn first)
+\draw[grp] (1.25,0.45) rectangle (3.75,-2.85);
+\draw[grp] (4.65,0.45) rectangle (7.15,-2.85);
+\node[draw, circle, inner sep=0.5pt, font=\scriptsize\bfseries] at (1.65,-1.85) {C};
+\node[draw, circle, inner sep=0.5pt, font=\scriptsize\bfseries] at (4.95,-1.2) {G};
+% controller
+\node[sum] (s1) at (0.75,0) {};
+\node[sum] (s2) at (0.75,-2.4) {};
+\node[blk] (k11) at (2.3,0) {$K_{11}$};
+\node[blk] (d21) at (2.3,-1.2) {$D_{21}$};
+\node[blk] (k22) at (2.3,-2.4) {$K_{22}$};
+\node[sum] (su2) at (3.35,-2.4) {};
+% process
+\node[blk] (g11) at (5.65,0)    {$G_{11}$};
+\node[blk] (g12) at (5.65,-0.8) {$G_{12}$};
+\node[blk] (g21) at (5.65,-1.6) {$G_{21}$};
+\node[blk] (g22) at (5.65,-2.4) {$G_{22}$};
+\node[sum] (o1) at (6.75,0) {};
+\node[sum] (o2) at (6.75,-2.4) {};
+% references and errors
+\draw[->] (0,0) node[left]{$r_1$} -- (s1);
+\draw[->] (0,-2.4) node[left]{$r_2$} -- (s2);
+\draw[->] (s1) -- (k11); \node[sg] at (1.07,-0.17) {$e_1$};
+\draw[->] (s2) -- (k22); \node[sg] at (1.07,-2.22) {$e_2$};
+\fill (1.45,0) circle (0.9pt);
+\draw[->] (1.45,0) |- (d21);
+% controller outputs
+\draw[->] (d21) -| (su2);
+\draw[->] (k22) -- (su2);
+\draw[->] (k11) -- (g11); \node[sg] at (4.4,0.17) {$u_1$};
+\draw[->] (su2) -- (g22); \node[sg] at (4.05,-2.58) {$u_2$};
+\fill (4.1,0) circle (0.9pt);
+\draw[->] (4.1,0) |- (g21);
+\fill (4.35,-2.4) circle (0.9pt);
+\draw[->] (4.35,-2.4) |- (g12);
+% process outputs
+\draw[->] (g11) -- (o1);
+\draw[->] (g12) -| (o1);
+\draw[->] (g22) -- (o2);
+\draw[->] (g21) -| (o2);
+\draw[->] (o1) -- (7.75,0) node[right]{$y_1$};
+\draw[->] (o2) -- (7.75,-2.4) node[right]{$y_2$};
+% feedback
+\fill (7.4,0) circle (0.9pt);
+\fill (7.4,-2.4) circle (0.9pt);
+\draw[->] (7.4,0) -- (7.4,0.75) -| (s1);
+\draw[->] (7.4,-2.4) -- (7.4,-3.15) -| (s2);
+% signs
+\node[sg] at (0.5,0.22) {$+$};   \node[sg] at (0.97,0.3) {$-$};
+\node[sg] at (0.5,-2.18) {$+$};  \node[sg] at (0.95,-2.65) {$-$};
+\node[sg] at (3.12,-2.2) {$+$};  \node[sg] at (3.55,-2.18) {$+$};
+\node[sg] at (6.52,0.2) {$+$};   \node[sg] at (6.95,-0.22) {$+$};
+\node[sg] at (6.52,-2.2) {$+$};  \node[sg] at (6.95,-2.18) {$+$};
+\end{tikzpicture}
